@@ -24,8 +24,8 @@
     </inertial>
   </link>
 
-  <!-- Left wheel -->
-  <link name="left_wheel">
+  <!-- Front Left wheel -->
+  <link name="front left_wheel">
     <visual>
       <geometry>
         <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
@@ -34,12 +34,22 @@
     </visual>
   </link>
 
-   <!-- Right wheel -->
-  <link name="right_wheel">
+  <!-- Front Right wheel -->
+  <link name="front right_wheel">
     <visual>
       <geometry>
         <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
       </geometry>
       <origin xyz="0 -${base_width/2} 0" rpy="1.5708 0 0"/>
+    </visual>
+  </link>
+
+  <!-- Back Left Wheel-->
+  <link name="back left_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
+      </geometry>
+      <origin xyz="0 ${base_width/2} 0" rpy="1.5708 0 0"/>
     </visual>
   </link>
