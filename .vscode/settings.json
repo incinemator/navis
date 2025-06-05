@@ -1,0 +1,28 @@
+{
+  "python.autoComplete.extraPaths": [
+    "/home/painkiller/clearpath_ws/install/clearpath_generator_common/lib/python3.12/site-packages",
+    "/home/painkiller/clearpath_ws/install/clearpath_platform_msgs/lib/python3.12/site-packages",
+    "/home/painkiller/clearpath_ws/install/clearpath_motor_msgs/lib/python3.12/site-packages",
+    "/home/painkiller/clearpath_ws/install/clearpath_config/lib/python3.12/site-packages",
+    "/home/painkiller/clearpath_ws/install/clearpath_bt_joy/lib/python3.12/site-packages",
+    "/home/painkiller/ros2_ws/install/yahboom_rosmaster_navigation/lib/python3.12/site-packages",
+    "/home/painkiller/ros2_ws/install/yahboom_rosmaster_msgs/lib/python3.12/site-packages",
+    "/home/painkiller/ros2_ws/install/ros2_fundamentals_examples/lib/python3.12/site-packages",
+    "/home/painkiller/ros2_ws/install/nav2_sms_behavior/lib/python3.12/site-packages",
+    "/home/painkiller/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.12/site-packages",
+    "/opt/ros/jazzy/lib/python3.12/site-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/painkiller/clearpath_ws/install/clearpath_generator_common/lib/python3.12/site-packages",
+    "/home/painkiller/clearpath_ws/install/clearpath_platform_msgs/lib/python3.12/site-packages",
+    "/home/painkiller/clearpath_ws/install/clearpath_motor_msgs/lib/python3.12/site-packages",
+    "/home/painkiller/clearpath_ws/install/clearpath_config/lib/python3.12/site-packages",
+    "/home/painkiller/clearpath_ws/install/clearpath_bt_joy/lib/python3.12/site-packages",
+    "/home/painkiller/ros2_ws/install/yahboom_rosmaster_navigation/lib/python3.12/site-packages",
+    "/home/painkiller/ros2_ws/install/yahboom_rosmaster_msgs/lib/python3.12/site-packages",
+    "/home/painkiller/ros2_ws/install/ros2_fundamentals_examples/lib/python3.12/site-packages",
+    "/home/painkiller/ros2_ws/install/nav2_sms_behavior/lib/python3.12/site-packages",
+    "/home/painkiller/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.12/site-packages",
+    "/opt/ros/jazzy/lib/python3.12/site-packages"
+  ]
+}
