@@ -33,3 +33,13 @@
       <origin xyz="0 ${base_width/2} 0" rpy="1.5708 0 0"/>
     </visual>
   </link>
+
+   <!-- Right wheel -->
+  <link name="right_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
+      </geometry>
+      <origin xyz="0 -${base_width/2} 0" rpy="1.5708 0 0"/>
+    </visual>
+  </link>
