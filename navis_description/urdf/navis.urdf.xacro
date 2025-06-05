@@ -3,7 +3,7 @@
   <xacro:property name="wheel_radius" value="0.05"/>
   <xacro:property name="wheel_width" value="0.02"/>
   <xacro:property name="base_width" value="0.4"/>
-  <xacro:property name="base_length" value="0.3"/>
+  <xacro:property name="base_length" value="0.6"/>
   <xacro:property name="base_height" value="0.1"/>
 
   <link name="base_link">
@@ -51,5 +51,15 @@
         <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
       </geometry>
       <origin xyz="0 ${base_width/2} 0" rpy="1.5708 0 0"/>
+    </visual>
+  </link>
+
+  <!-- Back Right wheel -->
+  <link name="back right_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
+      </geometry>
+      <origin xyz="0 -${base_width/2} 0" rpy="1.5708 0 0"/>
     </visual>
   </link>
