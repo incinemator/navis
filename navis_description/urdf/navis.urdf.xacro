@@ -25,7 +25,7 @@
   </link>
 
   <!-- Front Left wheel -->
-  <link name="front left_wheel">
+  <link name="front_left_wheel">
     <visual>
       <geometry>
         <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
@@ -35,7 +35,7 @@
   </link>
 
   <!-- Front Right wheel -->
-  <link name="front right_wheel">
+  <link name="front_right_wheel">
     <visual>
       <geometry>
         <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
@@ -45,7 +45,7 @@
   </link>
 
   <!-- Back Left Wheel-->
-  <link name="back left_wheel">
+  <link name="back_left_wheel">
     <visual>
       <geometry>
         <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
@@ -55,7 +55,7 @@
   </link>
 
   <!-- Back Right wheel -->
-  <link name="back right_wheel">
+  <link name="back_right_wheel">
     <visual>
       <geometry>
         <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
@@ -63,3 +63,11 @@
       <origin xyz="0 -${base_width/2} 0" rpy="1.5708 0 0"/>
     </visual>
   </link>
+
+  <!-- Joints -->
+  <joint name"front_left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="front_left_wheel"/>
+    <origin xyz="0 ${base_width/2} 0"/ rpy="0 0 0">
+    <axis xyz="0 0 1"/>
+  </joint>
