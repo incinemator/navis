@@ -2,6 +2,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="navis">
 
   <!-- Properties -->
+  <xacro:property name="chassis_mesh" value="package://navis_description/meshes/x2_chassis.dae"/>
   <xacro:property name="wheel_radius" value="0.05"/>
   <xacro:property name="wheel_width" value="0.02"/>
   <xacro:property name="base_width" value="0.4"/>
