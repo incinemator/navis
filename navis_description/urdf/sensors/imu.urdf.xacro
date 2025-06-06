@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <!-- IMU Macro -->
-  <xacro:macro name="x2_imu" params="parent xyz:='0 0 0' rpy:='0 0 0'">
+  <xacro:macro name="navis_imu" params="parent xyz:='0 0 0' rpy:='0 0 0'">
     <!-- IMU Joint and Link -->
     <joint name="imu_joint" type="fixed">
       <parent link="${parent}"/>
