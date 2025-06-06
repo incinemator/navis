@@ -35,16 +35,8 @@
       </geometry>
     </visual>
 
-    <!-- Sensors -->
-    <xacro:include filename="$(find X2)/urdf/sensors.xacro"/>
-    <xacro:imu_sensor parent="base_link" 
-      xyz="0 0 0" rpy="0 0 0"
-      noise_mean="0" noise_stddev="0.007"/>
-
-    <xacro:stereo_camera parent="base_link" 
-      left_xyz="0.23 0.1 0.19" left_rpy="0 0 0"
-      right_xyz="0.23 -0.1 0.19" right_rpy="0 0 0"
-      width="1280" height="960" hfov="1.0472"/>
+    <!-- IMU -->
+    <xacro:navis_imu parent="base_link"/>
 
     <!-- Visual elements -->
     <visual name="navsat_visual_1">
