@@ -10,6 +10,12 @@ def generate_launch_description():
     # URDF file path
     urdf_file = os.path.join(pkg_share, 'urdf', 'navis.urdf.xacro')
     
+    rviz_config = os.path.join(
+        get_package_share_directory('navis_description'),
+        'rviz',
+        'navis_description.rviz'
+    )
+
     return LaunchDescription([
         # Robot State Publisher
         Node(
