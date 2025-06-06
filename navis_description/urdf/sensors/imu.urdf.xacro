@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- IMU Macro -->
+  <xacro:macro name="x2_imu" params="parent xyz:='0 0 0' rpy:='0 0 0'">
+    <!-- IMU Joint and Link -->
+    <joint name="imu_joint" type="fixed">
+      <parent link="${parent}"/>
+      <child link="imu_link"/>
+      <origin xyz="${xyz}" rpy="${rpy}"/>
+    </joint>
+    
+    <link name="imu_link"/>
+    
+    <!-- Gazebo IMU Sensor -->
+    <gazebo reference="imu_link">
+      <sensor name="imu_sensor" type="imu">
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <imu>
+          <noise>
+            <type>gaussian</type>
+            <!-- Angular velocity noise -->
+            <rate>
+              <mean>0</mean>
+              <stddev>2e-4</stddev>
+              <bias_mean>0.0000075</bias_mean>
+              <bias_stddev>0.0000008</bias_stddev>
+              <dynamic_bias_stddev>0.0000004</dynamic_bias_stddev>
+              <dynamic_bias_correlation_time>1000.0</dynamic_bias_correlation_time>
+            </rate>
+            <!-- Linear acceleration noise -->
+            <accel>
+              <mean>0</mean>
+              <stddev>1e-2</stddev>
+              <bias_mean>0.1</bias_mean>
+              <bias_stddev>0.001</bias_stddev>
+              <dynamic_bias_stddev>0.002</dynamic_bias_stddev>
+              <dynamic_bias_correlation_time>300.0</dynamic_bias_correlation_time>
+            </accel>
+          </noise>
+        </imu>
+        <plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+          <robotNamespace>/</robotNamespace>
+          <topicName>imu/data</topicName>
+          <bodyName>imu_link</bodyName>
+          <updateRateHZ>50.0</updateRateHZ>
+          <gaussianNoise>0.0</gaussianNoise>
+          <xyzOffset>0 0 0</xyzOffset>
+          <rpyOffset>0 0 0</rpyOffset>
+          <frameName>imu_link</frameName>
+        </plugin>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+
+</robot>
