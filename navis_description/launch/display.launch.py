@@ -29,7 +29,8 @@ def generate_launch_description():
             name='robot_state_publisher',
             output='screen',
             # arguments=[urdf_file],
-            parameters=[{'use_sim_time': False}]
+            # parameters=[{'use_sim_time': False}]
+            parameters=[robot_description]
         ),
         
         # RViz2
