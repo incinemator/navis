@@ -37,7 +37,7 @@
   </link>
 
     <!-- IMU -->
-    <!-- <xacro:navis_imu parent="base_link"/> -->
+    <xacro:navis_imu parent="base_link"/>
     <xacro:macro name="navis_imu" params="">
       <link name="imu_link">
         <visual>
@@ -63,12 +63,12 @@
     </xacro:macro>
 
     <!-- Visual elements -->
-    <visual name="navsat_visual_1">
+    <!-- <visual name="navsat_visual_1">
       <origin xyz="-0.18 0.126 0.1895" rpy="0 0 0"/>
       <geometry>
         <cylinder length="0.016" radius="0.026"/>
       </geometry>
-    </visual>
+    </visual> -->
 
     <!-- Headlights -->
     <xacro:macro name="headlight" params="name xyz rpy">
