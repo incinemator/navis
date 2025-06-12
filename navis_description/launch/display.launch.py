@@ -13,7 +13,7 @@ def generate_launch_description():
     #urdf_file = os.path.join(pkg_share, 'urdf', 'navis.urdf.xacro')
     urdf_file = PathJoinSubstitution([pkg_share, 'urdf', 'navis.urdf.xacro'])
     
-    robot_description = {'robot_description': Command(['xacro' , urdf_file])}
+    robot_description = {'robot_description': Command(['xacro', urdf_file])}
 
     # rviz_config = os.path.join(
     #     get_package_share_directory('navis_description'),
