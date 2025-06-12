@@ -34,6 +34,7 @@
         <mesh filename="package://X2/meshes/x2_chassis.dae"/>
       </geometry>
     </visual>
+  </link>
 
     <!-- IMU -->
     <!-- <xacro:navis_imu parent="base_link"/> -->
