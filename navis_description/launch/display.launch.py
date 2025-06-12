@@ -11,8 +11,15 @@ def generate_launch_description():
     ])
 
     robot_description = {
-        'robot_description': Command(['xacro', urdf_file])
-    }
+    'robot_description': Command([
+        'xacro ',
+        PathJoinSubstitution([
+            FindPackageShare('navis_description'),
+            'urdf',
+            'navis.urdf.xacro'
+        ])
+    ])
+}
 
     return LaunchDescription([
         Node(
