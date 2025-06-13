@@ -10,7 +10,7 @@ def generate_launch_description():
             executable='robot_state_publisher',
             name='robot_state_publisher',
             parameters=[{
-                'robot_description': os.popen('xacro /absolute/path/to/navis.urdf.xacro').read()
+                'robot_description': os.popen('xacro /ros2_ws/src/navis/navis_description/urdf/robots/navis.urdf.xacro').read()
             }]
         )
     ])
