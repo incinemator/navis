@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="navis">
 
-  <xacro:include filename="$(find X2)/urdf/imu.urdf.xacro" />
+  <xacro:include filename="$navis_descripiton/urdf/sensors/imu.urdf.xacro" />
 
   <!-- Base parameters -->
   <xacro:property name="base_length" value="0.42" />
