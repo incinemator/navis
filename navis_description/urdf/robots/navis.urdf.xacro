@@ -33,7 +33,7 @@
     <visual name="chassis_visual">
       <origin xyz="0 0 -0.0655" rpy="1.5708 0 -1.5708"/>
       <geometry>
-        <mesh filename="package://X2/meshes/x2_chassis.dae"/>
+        <mesh filename="package://navis_description/meshes/x2_chassis.dae"/>
       </geometry>
     </visual>
   </link>
@@ -77,7 +77,7 @@
       <visual name="${name}">
         <origin xyz="${xyz}" rpy="${rpy}"/>
         <geometry>
-          <mesh filename="package://X2/meshes/headlight.dae"/>
+          <mesh filename="package://navis_description/meshes/headlight.dae"/>
         </geometry>
       </visual>
     </xacro:macro>
@@ -118,7 +118,7 @@
       <visual name="${prefix}_visual">
         <origin xyz="0 0 0" rpy="1.5708 0 0"/>
         <geometry>
-          <mesh filename="package://X2/meshes/x2_wheel_${'left' if reflect > 0 else 'right'}.dae"/>
+          <mesh filename="package://navis_description/meshes/x2_wheel_${'left' if reflect > 0 else 'right'}.dae"/>
         </geometry>
       </visual>
     </link>
