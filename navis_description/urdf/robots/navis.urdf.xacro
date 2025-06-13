@@ -1,9 +1,9 @@
-<?xml version="1.0"?>
+<!-- <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="navis">
 
   <xacro:include filename="$navis_descripiton/urdf/sensors/imu.urdf.xacro" />
 
-  <!-- Base parameters -->
+  Base parameters
   <xacro:property name="base_length" value="0.42" />
   <xacro:property name="base_width" value="0.31" />
   <xacro:property name="base_height" value="0.184" />
@@ -12,7 +12,7 @@
   <xacro:property name="wheel_length" value="0.04" />
   <xacro:property name="wheel_mass" value="0.477" />
 
-  <!-- Base link -->
+  Base link
   <link name="base_link">
     <inertial>
       <origin xyz="0.011999 0.002 0.066996" rpy="0 0 0"/>
@@ -33,13 +33,13 @@
     <visual name="chassis_visual">
       <origin xyz="0 0 -0.0655" rpy="1.5708 0 -1.5708"/>
       <geometry>
-        <!-- <mesh filename="package://navis_description/meshes/x2_chassis.dae"/> -->
+        <mesh filename="package://navis_description/meshes/x2_chassis.dae"/>
         <box size="0.2 0.2 0.2"/>
       </geometry>
     </visual>
   </link>
 
-    <!-- IMU -->
+    IMU
     <xacro:navis_imu parent="base_link"/>
     <xacro:macro name="navis_imu" params="">
       <link name="imu_link">
@@ -65,20 +65,20 @@
       </joint>
     </xacro:macro>
 
-    <!-- Visual elements -->
-    <!-- <visual name="navsat_visual_1">
+    Visual elements
+    <visual name="navsat_visual_1">
       <origin xyz="-0.18 0.126 0.1895" rpy="0 0 0"/>
       <geometry>
         <cylinder length="0.016" radius="0.026"/>
       </geometry>
     </visual> -->
 
-    <!-- Headlights -->
+    <!-- Headlights
     <xacro:macro name="headlight" params="name xyz rpy">
       <visual name="${name}">
         <origin xyz="${xyz}" rpy="${rpy}"/>
         <geometry>
-          <!-- <mesh filename="package://navis_description/meshes/headlight.dae"/> -->
+          <mesh filename="package://navis_description/meshes/headlight.dae"/>
           <box size="0.2 0.2 0.2"/>
         </geometry>
       </visual>
@@ -94,7 +94,7 @@
       xyz="0.22 -0.145 0.0845" rpy="0 0 -3.14159"/>
   </link>
 
-  <!-- Wheel macro -->
+  Wheel macro
   <xacro:macro name="wheel" params="prefix xyz reflect">
     <link name="${prefix}_wheel">
       <inertial>
@@ -120,7 +120,7 @@
       <visual name="${prefix}_visual">
         <origin xyz="0 0 0" rpy="1.5708 0 0"/>
         <geometry>
-          <!-- <mesh filename="package://navis_description/meshes/x2_wheel_${'left' if reflect > 0 else 'right'}.dae"/> -->
+          <mesh filename="package://navis_description/meshes/x2_wheel_${'left' if reflect > 0 else 'right'}.dae"/>
           <box size="0.2 0.2 0.2"/>
         </geometry>
       </visual>
@@ -145,13 +145,13 @@
     </transmission>
   </xacro:macro>
 
-  <!-- Create wheels -->
+  Create wheels
   <xacro:wheel prefix="front_left" xyz="0.131 0.187795 0.0345" reflect="1"/>
   <xacro:wheel prefix="front_right" xyz="0.131 -0.187795 0.0345" reflect="-1"/>
   <xacro:wheel prefix="rear_left" xyz="-0.131 0.187795 0.0345" reflect="1"/>
   <xacro:wheel prefix="rear_right" xyz="-0.131 -0.187795 0.0345" reflect="-1"/>
 
-  <!-- Gazebo extensions -->
+  Gazebo extensions
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
       <robotNamespace>/X2</robotNamespace>
@@ -170,4 +170,4 @@
       <child link="base_link"/>
        <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
-</robot>
+</robot> -->
