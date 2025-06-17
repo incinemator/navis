@@ -1,13 +1,15 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="navis">
 
-  <!-- World link -->
+<!-- world link -->
 <link name="world"></link>
 
+<!-- base joint-->
 <joint name="base_joint" type="fixed">
     <origin xyz="1.5 1.0 0" rpy="0 0 0"/>
     <parent link="world"/>
     <child link="base_link"/>
 </joint>
+
 
 </robot>
