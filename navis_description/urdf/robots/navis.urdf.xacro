@@ -11,5 +11,6 @@
     <child link="base_link"/>
 </joint>
 
+<!-- base link-->
 
 </robot>
