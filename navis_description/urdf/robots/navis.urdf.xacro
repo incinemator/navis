@@ -13,7 +13,17 @@
 
 <!-- base link-->
 <link name="base_link">
+<<<<<<< HEAD
     
+=======
+    <visual>
+        <origin xyz="0 0 0.05" rpy="0 0 0"/>
+        <geometry>
+            <cylinder height>
+        </geometry>
+    </visual>
+
+>>>>>>> 9075d9c1cc74c208bf224ed4b1b453b264b10777
 </link>
 
 </robot>
